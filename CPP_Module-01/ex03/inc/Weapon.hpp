@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 15:43:25 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/23 18:38:55 by aamaya-g         ###   ########.fr       */
+/*   Created: 2025/12/23 19:59:15 by aamaya-g          #+#    #+#             */
+/*   Updated: 2025/12/23 20:10:25 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-int	main (void)
+#include <iostream>
+
+class Weapon
 {
-	int	N = 5;
+	private:
+		std::string _type;
 
-	std::cout << "--- HORDE WITH " << N << " ZOMBIES ---" << std::endl;
-	Zombie *horde = zombieHorde(N, "Felipe");
-	if (!horde)
-	{
-		std::cerr << "Error: failed creattion" << std::endl;
-		return 0;
-	}
-	for (int i = 0; i < N; i++)
-		horde[i].announce();
-	delete [] horde;	
-}
+	public:
+		Weapon();
+		Weapon(const char *type);
+		~Weapon();
+
+		void				setType(const std::string& newType);
+		const std::string&	getType(void) const;	
+};
+
+#endif

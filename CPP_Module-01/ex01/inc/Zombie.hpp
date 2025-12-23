@@ -29,7 +29,7 @@ class Zombie
 
 };
 
-Zombie	*zombieHorde(int N, const chat *name);
+Zombie	*zombieHorde(int N, const char *name);
 Zombie	*zombieHorde(int N, std::string name);
 
 #endif

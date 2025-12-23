@@ -21,7 +21,7 @@ int	main()
 
 	std::cout << "------ CREATING ANOTHER STACK ZOMBIE -----" << std::endl;
 	std::cout << "Calling randomChump function" << std::endl;
-	randomChump("Felipe");
+	randomChump("Dani");
 	std::cout << "Back in main after randomChump" << std::endl;
 	std::cout << std::endl;
 

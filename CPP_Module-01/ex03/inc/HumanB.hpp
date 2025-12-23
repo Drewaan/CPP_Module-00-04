@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 15:43:25 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/23 18:38:55 by aamaya-g         ###   ########.fr       */
+/*   Created: 2025/12/23 20:14:28 by aamaya-g          #+#    #+#             */
+/*   Updated: 2025/12/23 20:32:56 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int	main (void)
+#include "Weapon.hpp"
+
+class HumanB
 {
-	int	N = 5;
+	private:
+		std::string	_name;
+		Weapon*		_weapon;
 
-	std::cout << "--- HORDE WITH " << N << " ZOMBIES ---" << std::endl;
-	Zombie *horde = zombieHorde(N, "Felipe");
-	if (!horde)
-	{
-		std::cerr << "Error: failed creattion" << std::endl;
-		return 0;
-	}
-	for (int i = 0; i < N; i++)
-		horde[i].announce();
-	delete [] horde;	
-}
+	public:
+		HumanB(std::string name);
+		~HumanB();
+
+		void	attack() const;
+		void	setWeapon(Weapon& newWeapon);
+};
+
+
+#endif

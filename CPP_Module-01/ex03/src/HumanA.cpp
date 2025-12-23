@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 15:43:25 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/23 18:38:55 by aamaya-g         ###   ########.fr       */
+/*   Created: 2025/12/23 20:16:09 by aamaya-g          #+#    #+#             */
+/*   Updated: 2025/12/23 20:29:26 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include "../inc/HumanA.hpp"
 
-int	main (void)
-{
-	int	N = 5;
+HumanA::HumanA(std::string name, Weapon& type): _name(name), _weapon(type) {}
 
-	std::cout << "--- HORDE WITH " << N << " ZOMBIES ---" << std::endl;
-	Zombie *horde = zombieHorde(N, "Felipe");
-	if (!horde)
-	{
-		std::cerr << "Error: failed creattion" << std::endl;
-		return 0;
-	}
-	for (int i = 0; i < N; i++)
-		horde[i].announce();
-	delete [] horde;	
-}
+HumanA::~HumanA() {}
+
+
+void	HumanA::attack() const { std::cout << _name << " attacks with their " << _weapon.getType() << std::endl; }

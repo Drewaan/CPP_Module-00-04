@@ -5,25 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 15:43:25 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/23 18:38:55 by aamaya-g         ###   ########.fr       */
+/*   Created: 2025/12/23 19:23:57 by aamaya-g          #+#    #+#             */
+/*   Updated: 2025/12/23 20:39:35 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include "../inc/Weapon.hpp"
+#include "../inc/HumanA.hpp"
+#include "../inc/HumanB.hpp"
 
-int	main (void)
+
+int main()
 {
-	int	N = 5;
+    {
+        Weapon club = Weapon("crude spiked club");
 
-	std::cout << "--- HORDE WITH " << N << " ZOMBIES ---" << std::endl;
-	Zombie *horde = zombieHorde(N, "Felipe");
-	if (!horde)
-	{
-		std::cerr << "Error: failed creattion" << std::endl;
-		return 0;
-	}
-	for (int i = 0; i < N; i++)
-		horde[i].announce();
-	delete [] horde;	
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+    {
+        Weapon club = Weapon("crude spiked club");
+
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+    return 0;
 }

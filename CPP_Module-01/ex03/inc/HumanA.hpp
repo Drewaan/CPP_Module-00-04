@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 15:43:25 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/23 18:38:55 by aamaya-g         ###   ########.fr       */
+/*   Created: 2025/12/23 20:14:30 by aamaya-g          #+#    #+#             */
+/*   Updated: 2025/12/23 20:30:40 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-int	main (void)
+#include "Weapon.hpp"
+
+class HumanA
 {
-	int	N = 5;
+	private:
+		std::string	_name;
+		Weapon&		_weapon;
+	public:
+		HumanA(std::string name, Weapon& type);
+		~HumanA();
 
-	std::cout << "--- HORDE WITH " << N << " ZOMBIES ---" << std::endl;
-	Zombie *horde = zombieHorde(N, "Felipe");
-	if (!horde)
-	{
-		std::cerr << "Error: failed creattion" << std::endl;
-		return 0;
-	}
-	for (int i = 0; i < N; i++)
-		horde[i].announce();
-	delete [] horde;	
-}
+		void	attack() const;
+};
+
+#endif
