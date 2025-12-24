@@ -5,34 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/23 19:23:57 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/24 11:30:28 by aamaya-g         ###   ########.fr       */
+/*   Created: 2025/12/24 13:47:41 by aamaya-g          #+#    #+#             */
+/*   Updated: 2025/12/24 15:39:39 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Weapon.hpp"
-#include "../inc/HumanA.hpp"
-#include "../inc/HumanB.hpp"
+#include "../inc/Harl.hpp"
 
-
-int main()
+int main(int argc, char **argv)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
+	Harl harl;
 
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
+	if (argc != 2)
 	{
-		Weapon club = Weapon("crude spiked club");
-
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+		std::cerr << "Usage: " << argv[0] << " <LEVEL>" << std::endl;
+		return 1;
 	}
+
+	harl.complain(argv[1]);
 	return 0;
 }
+
