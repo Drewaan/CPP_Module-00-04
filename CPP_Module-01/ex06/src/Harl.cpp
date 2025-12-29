@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 16:17:04 by aamaya-g          #+#    #+#             */
-/*   Updated: 2025/12/24 17:08:00 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2025/12/29 13:51:34 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,27 @@ void	Harl::error(void) { std::cout << "[ERROR]\n" << "This is unacceptable! I wa
 
 void	Harl::complain(std::string level)
 {
-	std::string	s[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void		(Harl::*p[4])() = {&Harl:: debug, &Harl::info, &Harl::warning, &Harl::error};
-	int			i = 0;
+	int	x = -1;
+	std::string	arr[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for(int i = 0; i < 4; i++)
+		if(arr[i] == level)
+		{
+				x = i;
+				break ;
+		}
 
-	while(i < 4 && s[i].compare(level) != 0) { i++; }
-	
-	if (i > 3) { std::cout << "[] Probably complaining about insignificant problems ]" << std::endl; }
-	
-	while(i < 4) { (this->*p[i++])(); }
+	switch (x)
+	{
+		case 0:
+			debug();
+		case 1:
+			info();
+		case 2:
+			warning();
+		case 3:
+			error();
+		break ;
+		default:
+			break;
+	}
 }
