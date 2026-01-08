@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/29 17:40:54 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/08 12:26:45 by aamaya-g         ###   ########.fr       */
+/*   Created: 2026/01/08 16:45:15 by aamaya-g          #+#    #+#             */
+/*   Updated: 2026/01/08 18:59:33 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,22 @@
 
 int main( void )
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
+	Fixed	a;
+	Fixed	const b( Fixed( 5.05f ) / Fixed( 2 ));
+
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	
+	std::cout << "a is: "<< a << std::endl;
+	std::cout << "b is: "<< b << std::endl;
+	std::cout << "max is: "<< Fixed::max( a, b ) << std::endl;
+
+	while (b >= a)
+		a++;
+
+	std::cout << "a is: "<< a << std::endl;
+	std::cout << "b is: "<< b << std::endl;
+	std::cout << "max is: "<< Fixed::max( a, b ) << std::endl;
 }
