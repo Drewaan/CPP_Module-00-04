@@ -7,7 +7,7 @@ SRC_DIR = src
 OBJ_DIR = obj
 INC_DIR = inc
 
-SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/ClapTrap.cpp $(SRC_DIR)/ScavTrap.cpp
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 
 all: $(NAME)
@@ -24,7 +24,7 @@ $(NAME): $(OBJS)
 	@echo " ╚██████╗██║     ██║       ╚██████╔╝ ██████║"
 	@echo "  ╚═════╝╚═╝     ╚═╝        ╚═════╝  ╚═════╝"
 	@echo " ==========================================="
-	@echo " |   EX00: Serena, my love!  by aamaya-g   |"
+	@echo " |   EX01: Serena, my love!  by aamaya-g   |"
 	@echo " ==========================================="
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
