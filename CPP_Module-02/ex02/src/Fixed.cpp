@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 16:45:12 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/08 18:57:33 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:05:27 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,25 @@ Fixed   &Fixed::operator=(const Fixed &fixed)
 	return *this;
 }
 
-Fixed	Fixed::operator+(const Fixed &fixed1) const { return (Fixed(fixed1.toFloat() + this -> toFloat())); }
+Fixed	Fixed::operator+(const Fixed &fixed1) const{ return (Fixed(fixed1.toFloat() + this -> toFloat())); }
 
-Fixed	Fixed::operator-(const Fixed &fixed1) const { return (Fixed(fixed1.toFloat() - this -> toFloat())); }
+Fixed	Fixed::operator-(const Fixed &fixed1) const{ return (Fixed(fixed1.toFloat() - this -> toFloat())); }
 
-Fixed	Fixed::operator*(const Fixed &fixed1) const { return (Fixed(fixed1.toFloat() * this -> toFloat())); }
+Fixed	Fixed::operator*(const Fixed &fixed1) const{ return (Fixed(fixed1.toFloat() * this -> toFloat())); }
 
-Fixed	Fixed::operator/(const Fixed &fixed1) const { return (Fixed(fixed1.toFloat() / this -> toFloat())); }
+Fixed	Fixed::operator/(const Fixed &fixed1) const{ return (Fixed(fixed1.toFloat() / this -> toFloat())); }
 
-bool	Fixed::operator>(const Fixed &fixed1) const { return (this -> toFloat() > fixed1.toFloat()); }
+bool	Fixed::operator>(const Fixed &fixed1) const{ return (this -> toFloat() > fixed1.toFloat()); }
 
-bool	Fixed::operator<(const Fixed &fixed1) const { return (this -> toFloat() < fixed1.toFloat()); }
+bool	Fixed::operator<(const Fixed &fixed1) const{ return (this -> toFloat() < fixed1.toFloat()); }
 
-bool	Fixed::operator>=(const Fixed &fixed1) const { return (this -> toFloat() >= fixed1.toFloat()); }
+bool	Fixed::operator>=(const Fixed &fixed1) const{ return (this -> toFloat() >= fixed1.toFloat()); }
 
-bool	Fixed::operator<=(const Fixed &fixed1) const { return (this -> toFloat() <= fixed1.toFloat()); }
+bool	Fixed::operator<=(const Fixed &fixed1) const{ return (this -> toFloat() <= fixed1.toFloat()); }
 
-bool	Fixed::operator==(const Fixed &fixed1) const { return (this -> toFloat() == fixed1.toFloat()); }
+bool	Fixed::operator==(const Fixed &fixed1) const{ return (this -> toFloat() == fixed1.toFloat()); }
 
-bool	Fixed::operator!=(const Fixed &fixed1) const { return (this -> toFloat() != fixed1.toFloat()); }
+bool	Fixed::operator!=(const Fixed &fixed1) const{ return (this -> toFloat() != fixed1.toFloat()); }
 
 Fixed	&Fixed::operator++(void)
 {
