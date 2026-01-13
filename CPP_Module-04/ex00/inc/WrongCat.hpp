@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:32:58 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/13 13:36:58 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/01/13 17:17:19 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class WrongCat : public WrongAnimal
 		WrongCat &operator=(WrongCat &wrongcat);
 
 		~WrongCat();
+
+		void	makeSound() const;
 };
 
 #endif

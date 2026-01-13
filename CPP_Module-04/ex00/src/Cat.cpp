@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:33:25 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/13 13:35:45 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/01/13 17:17:20 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat()
 Cat::Cat(const Cat &cat)
 {
 	this -> type = cat.type;
-	std::cout << "Cat copy cosntructor called" << std::endl;
+	std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat &Cat::operator=(Cat &cat)

@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:54:45 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/13 12:56:35 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/01/13 17:17:20 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Dog::Dog()
 Dog::Dog(const Dog &dog)
 {
 	this -> type = dog.type;
-	std::cout << "Dog copy cosntructor called" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog &Dog::operator=(Dog &dog)

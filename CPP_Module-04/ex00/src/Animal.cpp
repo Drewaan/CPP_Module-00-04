@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 18:54:34 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/13 12:51:42 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/01/13 17:17:20 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Animal &Animal::operator=(Animal &animal)
 
 Animal::~Animal()
 {
-	std::cout << "Deafault animal destructor called" << std::endl;
+	std::cout << "Default animal destructor called" << std::endl;
 }
 
 void	Animal::makeSound() const

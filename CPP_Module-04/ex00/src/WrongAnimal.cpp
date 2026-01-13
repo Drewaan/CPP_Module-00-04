@@ -6,7 +6,7 @@
 /*   By: aamaya-g <aamaya-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 13:29:46 by aamaya-g          #+#    #+#             */
-/*   Updated: 2026/01/13 13:31:21 by aamaya-g         ###   ########.fr       */
+/*   Updated: 2026/01/13 17:17:20 by aamaya-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ WrongAnimal &WrongAnimal::operator=(WrongAnimal &wronganimal)
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Deafault wronganimal destructor called" << std::endl;
+	std::cout << "Default wronganimal destructor called" << std::endl;
 }
 
 void	WrongAnimal::makeSound() const
